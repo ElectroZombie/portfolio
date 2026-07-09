@@ -1,0 +1,20 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">
+      <span class="brand-text">EMV</span>
+      <span class="brand-glitch">EMV</span>
+    </div>
+    <ul class="nav-menu">
+      <li *ngFor="let item of navItems" class="nav-item">
+        <a
+          [routerLink]="item.route"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: false }"
+          class="nav-link"
+        >
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

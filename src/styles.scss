@@ -1,1 +1,120 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'app/styles/variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: $dark-bg;
+  color: $text-light;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba($neon-red, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, $neon-red, $neon-cyan);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba($neon-red, 0.3);
+
+  &:hover {
+    background: linear-gradient(180deg, $neon-cyan, $neon-red);
+    box-shadow: 0 0 15px rgba($neon-cyan, 0.5);
+  }
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Selection */
+::selection {
+  background-color: $neon-red;
+  color: $dark-bg;
+}
+
+::-moz-selection {
+  background-color: $neon-red;
+  color: $dark-bg;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes neon-glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba($neon-red, 0.5), 0 0 20px rgba($neon-red, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba($neon-red, 0.8), 0 0 30px rgba($neon-red, 0.6);
+  }
+}

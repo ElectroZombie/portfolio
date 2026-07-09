@@ -1,0 +1,21 @@
+<section class="experience-section">
+  <div class="container">
+    <h1 class="section-title">Experiencia Laboral</h1>
+
+    <div class="experience-timeline">
+      <div *ngFor="let exp of experiences; let i = index" class="timeline-item">
+        <div class="timeline-marker" [attr.data-index]="i"></div>
+        <div class="timeline-content">
+          <div class="experience-card">
+            <h3 class="position-title">{{ exp.position }}</h3>
+            <p class="company-name">{{ exp.company }}</p>
+            <p class="period">{{ exp.period }}</p>
+            <p *ngIf="exp.description" class="description">
+              {{ exp.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

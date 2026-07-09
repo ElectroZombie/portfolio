@@ -1,0 +1,19 @@
+<section class="projects-section">
+  <div class="container">
+    <h1 class="section-title">Proyectos Destacados</h1>
+
+    <div class="projects-grid">
+      <div *ngFor="let project of projects" class="project-card">
+        <div class="project-header">
+          <h3 class="project-title">{{ project.name }}</h3>
+        </div>
+        <p class="project-description">{{ project.description }}</p>
+        <div class="project-technologies">
+          <span *ngFor="let tech of project.technologies" class="tech-tag">
+            {{ tech }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
