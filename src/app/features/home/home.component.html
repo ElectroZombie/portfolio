@@ -1,0 +1,37 @@
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">
+        <span class="title-line">{{ cvData.personalInfo.name }}</span>
+      </h1>
+      <h2 class="hero-subtitle">{{ cvData.personalInfo.title }}</h2>
+      <p class="hero-description">
+        {{ cvData.personalInfo.summary }}
+      </p>
+      <div class="cta-buttons">
+        <a href="#about" class="btn btn-primary">Ver Más</a>
+        <a [href]="'mailto:' + cvData.contact.email" class="btn btn-secondary">
+          Contactar
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <span class="terminal-button"></span>
+          <span class="terminal-button"></span>
+          <span class="terminal-button"></span>
+        </div>
+        <div class="terminal-content">
+          <p>$ whoami</p>
+          <p class="response">{{ cvData.personalInfo.name }}</p>
+          <p>$ expertise</p>
+          <p class="response">Full Stack Developer | Competitive Programmer</p>
+          <p>$ github</p>
+          <p class="response">{{ cvData.contact.github }}</p>
+          <p class="cursor">_</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

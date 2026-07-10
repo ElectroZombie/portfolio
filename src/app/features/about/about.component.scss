@@ -1,0 +1,175 @@
+@import '../../styles/variables.scss';
+
+.about-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba($neon-red, 0.03) 0%, rgba($neon-cyan, 0.03) 100%);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    color: $neon-red;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 1rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, $neon-red, transparent);
+      box-shadow: 0 0 10px rgba($neon-red, 0.5);
+    }
+  }
+
+  .about-intro {
+    margin-bottom: 3rem;
+
+    .intro-text {
+      font-size: 1.2rem;
+      color: $text-light;
+      line-height: 1.8;
+      padding: 1.5rem;
+      border-left: 4px solid $neon-cyan;
+      background: rgba($neon-cyan, 0.05);
+    }
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    .about-card {
+      border: 2px solid $neon-red;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba($dark-bg, 0.8) 0%, rgba(10, 10, 30, 0.9) 100%);
+      box-shadow: 0 0 15px rgba($neon-red, 0.2);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba($neon-red, 0.1), transparent);
+        transition: left 0.5s ease;
+      }
+
+      &:hover {
+        box-shadow: 0 0 25px rgba($neon-red, 0.5);
+        border-color: $neon-cyan;
+
+        &::before {
+          left: 100%;
+        }
+      }
+
+      .card-title {
+        color: $neon-cyan;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .education-item {
+        margin-bottom: 1.5rem;
+
+        h4 {
+          color: $neon-red;
+          margin: 0 0 0.5rem 0;
+        }
+
+        .institution {
+          color: $text-light;
+          margin: 0.25rem 0;
+          font-style: italic;
+        }
+
+        .date {
+          color: $text-secondary;
+          font-size: 0.9rem;
+          margin: 0.25rem 0 0 0;
+        }
+      }
+
+      .specialization-list,
+      .skills-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          color: $text-light;
+          padding: 0.5rem 0;
+          padding-left: 1.5rem;
+          position: relative;
+
+          &::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: $neon-cyan;
+          }
+        }
+      }
+    }
+  }
+
+  .curriculum-section {
+    .section-subtitle {
+      color: $neon-cyan;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .curriculum-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .curriculum-item {
+        color: $text-light;
+        padding: 1rem 1.5rem;
+        border-left: 3px solid $neon-red;
+        background: rgba($neon-red, 0.05);
+        margin-bottom: 0.75rem;
+        transition: all 0.3s ease;
+        position: relative;
+
+        &:hover {
+          border-left-color: $neon-cyan;
+          background: rgba($neon-cyan, 0.05);
+          padding-left: 2rem;
+
+          .curriculum-marker {
+            color: $neon-cyan;
+          }
+        }
+
+        .curriculum-marker {
+          color: $neon-red;
+          margin-right: 0.75rem;
+          font-weight: bold;
+          transition: color 0.3s ease;
+        }
+      }
+    }
+  }
+}

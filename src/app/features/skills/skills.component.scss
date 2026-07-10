@@ -1,0 +1,137 @@
+@import '../../styles/variables.scss';
+
+.skills-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba($neon-red, 0.03) 0%, rgba($neon-cyan, 0.03) 100%);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    color: $neon-red;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 1rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, $neon-red, transparent);
+      box-shadow: 0 0 10px rgba($neon-red, 0.5);
+    }
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .skill-category {
+    border: 2px solid $neon-red;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba($dark-bg, 0.8) 0%, rgba(10, 10, 30, 0.9) 100%);
+    box-shadow: 0 0 15px rgba($neon-red, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba($neon-red, 0.1), transparent);
+      transition: left 0.5s ease;
+    }
+
+    &:hover {
+      box-shadow: 0 0 25px rgba($neon-red, 0.5), inset 0 0 15px rgba($neon-red, 0.1);
+      border-color: $neon-cyan;
+      transform: translateY(-5px);
+
+      &::before {
+        left: 100%;
+      }
+
+      .category-title {
+        color: $neon-cyan;
+      }
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+
+      .category-title {
+        color: $neon-red;
+        font-size: 1.3rem;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: color 0.3s ease;
+      }
+
+      .category-accent {
+        flex: 1;
+        height: 2px;
+        background: linear-gradient(90deg, $neon-red, transparent);
+        box-shadow: 0 0 10px rgba($neon-red, 0.3);
+      }
+    }
+
+    .skills-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .skill-badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: linear-gradient(135deg, rgba($neon-cyan, 0.1) 0%, rgba($neon-red, 0.1) 100%);
+      border: 1px solid $neon-cyan;
+      color: $neon-cyan;
+      border-radius: 3px;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba($neon-cyan, 0.2), transparent);
+        transition: left 0.3s ease;
+      }
+
+      &:hover {
+        border-color: $neon-red;
+        color: $neon-red;
+        box-shadow: 0 0 10px rgba($neon-red, 0.3);
+
+        &::before {
+          left: 100%;
+        }
+      }
+    }
+  }
+}

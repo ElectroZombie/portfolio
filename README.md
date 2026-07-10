@@ -1,59 +1,134 @@
-# Portfolio
+# Portfolio - Eric Michel Villavicencio Reyes
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+## Descripción
 
-## Development server
+Portafolio profesional moderno desarrollado con Angular 19, siguiendo las mejores prácticas de desarrollo web y arquitectura modular.
 
-To start a local development server, run:
+## Características
 
-```bash
-ng serve
+- 🎨 **Diseño Cyberpunk**: Tema visual moderno con colores rojo neón y cian
+- 📱 **Responsive Design**: Optimizado para dispositivos móviles y desktop
+- ⚡ **Alto Rendimiento**: Componentes standalone y lazy loading
+- 🎯 **Arquitectura Modular**: Separación clara de responsabilidades
+- 🔧 **TypeScript Strict**: Tipado fuerte para mayor seguridad
+- 🎭 **Animaciones Suaves**: Transiciones elegantes y efectos visuales
+
+## Estructura del Proyecto
+
+```
+src/
+├── app/
+│   ├── core/
+│   │   ├── models/          # Modelos de datos
+│   │   ├── services/        # Servicios centralizados
+│   │   └── constants/       # Constantes de la aplicación
+│   ├── features/            # Módulos feature
+│   │   ├── home/
+│   │   ├── about/
+│   │   ├── skills/
+│   │   ├── projects/
+│   │   ├── experience/
+│   │   └── contact/
+│   ├── shared/
+│   │   ├── components/      # Componentes reutilizables
+│   │   ├── layouts/         # Layouts compartidos
+│   │   └── pipes/           # Pipes personalizadas (futuro)
+│   ├── styles/              # Estilos globales y variables
+│   ├── app.component.ts
+│   ├── app.config.ts
+│   └── app.routes.ts
+├── styles.scss              # Estilos globales
+└── main.ts
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Instalación y Desarrollo
 
-## Code scaffolding
+### Requisitos
+- Node.js 18+
+- npm 9+
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Pasos
+
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/ElectroZombie/portfolio.git
+   cd portfolio
+   ```
+
+2. **Instalar dependencias**
+   ```bash
+   npm install
+   ```
+
+3. **Iniciar servidor de desarrollo**
+   ```bash
+   npm start
+   ```
+   La aplicación estará disponible en `http://localhost:4200/`
+
+4. **Compilar para producción**
+   ```bash
+   npm run build
+   ```
+
+## Tecnologías Utilizadas
+
+- **Framework**: Angular 19.2
+- **Lenguaje**: TypeScript 5.7
+- **Estilos**: SCSS
+- **Componentes**: Standalone Components
+- **Enrutamiento**: Angular Router
+- **State Management**: RxJS Observables
+
+## Mejores Prácticas Implementadas
+
+✅ Componentes standalone
+✅ Lazy loading de rutas
+✅ Separación de responsabilidades
+✅ Servicios centralizados (CvService)
+✅ Modelos tipados fuertemente
+✅ Constantes centralizadas
+✅ Estilos modulares y reutilizables
+✅ Reactive Programming con RxJS
+✅ Estructura de carpetas clara
+✅ Código limpio y bien documentado
+
+## Scripts Disponibles
 
 ```bash
-ng generate component component-name
+npm start          # Inicia el servidor de desarrollo
+npm run build      # Compila para producción
+npm run watch      # Compila en modo watch
+npm test           # Ejecuta los tests unitarios
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Variables de Entorno
 
-```bash
-ng generate --help
+No requiere configuración especial de variables de entorno. Los datos se cargan desde `CV_DATA` en `core/constants/cv.constant.ts`.
+
+## Customización
+
+### Cambiar colores
+Edita `src/app/styles/variables.scss`:
+```scss
+$neon-red: #ff0055;
+$neon-cyan: #00d9ff;
 ```
 
-## Building
+### Agregar información personal
+Modifica `src/app/core/constants/cv.constant.ts` con tus datos.
 
-To build the project run:
+## Autor
 
-```bash
-ng build
-```
+**Eric Michel Villavicencio Reyes**
+- 📧 [Email](mailto:daphniphyllum901@gmail.com)
+- 🔗 [GitHub](https://github.com/ElectroZombie)
+- 📱 +5354939174
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Licencia
 
-## Running unit tests
+Este proyecto está bajo la Licencia MIT.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Contribuciones
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Las contribuciones son bienvenidas. Por favor, abre un issue o pull request para cambios importantes.

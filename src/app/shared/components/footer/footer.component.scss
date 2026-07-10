@@ -1,0 +1,77 @@
+@import '../../../styles/variables.scss';
+
+.footer {
+  background: linear-gradient(180deg, rgba($dark-bg, 0.95) 0%, $dark-bg 100%);
+  border-top: 2px solid $neon-red;
+  color: $text-light;
+  padding: 2rem 0 1rem;
+  margin-top: 4rem;
+  box-shadow: 0 -5px 20px rgba($neon-red, 0.2);
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    padding: 0 2rem 2rem;
+
+    .footer-section {
+      h3 {
+        color: $neon-red;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+      }
+
+      h4 {
+        color: $neon-cyan;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      p {
+        margin: 0;
+        color: $text-secondary;
+        font-size: 0.9rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin-bottom: 0.5rem;
+
+          a {
+            color: $text-light;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding-bottom: 2px;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+              color: $neon-red;
+              border-bottom-color: $neon-red;
+              text-shadow: 0 0 5px rgba($neon-red, 0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba($neon-red, 0.3);
+    padding-top: 1rem;
+    text-align: center;
+    color: $text-secondary;
+    font-size: 0.85rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+  }
+}

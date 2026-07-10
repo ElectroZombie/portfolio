@@ -1,0 +1,82 @@
+@import '../../../styles/variables.scss';
+
+.navbar {
+  background: linear-gradient(90deg, $dark-bg 0%, rgba($dark-bg, 0.95) 100%);
+  border-bottom: 2px solid $neon-red;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba($neon-red, 0.3);
+
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    color: $neon-red;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    .brand-glitch {
+      position: absolute;
+      left: 0;
+      color: $neon-cyan;
+      opacity: 0.7;
+      animation: glitch 0.2s infinite;
+
+      @keyframes glitch {
+        0% {
+          transform: translate(2px, 0);
+        }
+        50% {
+          transform: translate(-2px, 0);
+        }
+        100% {
+          transform: translate(0);
+        }
+      }
+    }
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+
+    .nav-item {
+      .nav-link {
+        color: $text-light;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+
+        &:hover {
+          color: $neon-red;
+          border-bottom-color: $neon-red;
+          text-shadow: 0 0 10px rgba($neon-red, 0.5);
+        }
+
+        &.active {
+          color: $neon-red;
+          border-bottom-color: $neon-red;
+          text-shadow: 0 0 10px rgba($neon-red, 0.7);
+        }
+      }
+    }
+  }
+}
