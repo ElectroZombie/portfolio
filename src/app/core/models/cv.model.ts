@@ -40,6 +40,8 @@ export interface CVData {
   workExperience: WorkExperience[];
   skills: Skill[];
   projects: Project[];
+  knowledges: String[];
+  softSkills: String[];
   curriculum: string[];
   languages: string[];
 }

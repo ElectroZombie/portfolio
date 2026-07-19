@@ -22,32 +22,24 @@
         </div>
 
         <div class="about-card">
-          <h3 class="card-title">Especialización</h3>
-          <ul class="specialization-list">
-            <li>Diseño y análisis de algoritmos</li>
-            <li>Ingeniería de software</li>
-            <li>Minería de datos</li>
-            <li>Modelos de arquitectura</li>
-            <li>Estructuras de datos</li>
-            <li>Teoría de grafos</li>
+          <h3 class="card-title">Base de conocimiento</h3>
+          <ul class="knowledge-list">
+           <div *ngFor="let data of cvData.knowledges" class="education-item">
+            <li>{{data}}</li>
           </ul>
         </div>
 
         <div class="about-card">
           <h3 class="card-title">Habilidades Blandas</h3>
           <ul class="skills-list">
-            <li>Dominio avanzado de inglés</li>
-            <li>Adaptabilidad al trabajo</li>
-            <li>Capacidad de aprendizaje</li>
-            <li>Trabajo en equipo</li>
-            <li>Liderazgo técnico</li>
-            <li>Mentoría</li>
+            <div *ngFor="let data of cvData.softSkills" class="education-item">
+            <li>{{data}}</li>
           </ul>
         </div>
       </div>
 
       <div class="curriculum-section">
-        <h2 class="section-subtitle">Currículo Destacado</h2>
+        <h2 class="section-subtitle">Currículo</h2>
         <ul class="curriculum-list">
           <li *ngFor="let item of cvData.curriculum" class="curriculum-item">
             <span class="curriculum-marker">></span> {{ item }}
