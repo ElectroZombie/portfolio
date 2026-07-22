@@ -24,16 +24,18 @@
         <div class="about-card">
           <h3 class="card-title">Base de conocimiento</h3>
           <ul class="knowledge-list">
-           <div *ngFor="let data of cvData.knowledges" class="education-item">
-            <li>{{data}}</li>
+           <li *ngFor="let data of cvData.knowledges" class="education-item">
+            {{data}}
+          </li>
           </ul>
         </div>
 
         <div class="about-card">
           <h3 class="card-title">Habilidades Blandas</h3>
           <ul class="skills-list">
-            <div *ngFor="let data of cvData.softSkills" class="education-item">
-            <li>{{data}}</li>
+            <li *ngFor="let data of cvData.softSkills" class="education-item">
+            {{data}}
+            </li>
           </ul>
         </div>
       </div>
