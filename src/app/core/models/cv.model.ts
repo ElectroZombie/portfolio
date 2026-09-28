@@ -21,6 +21,7 @@ export interface Project {
   description: string;
   technologies: string[];
   link?: string;
+  id: number;
 }
 
 export interface ContactInfo {

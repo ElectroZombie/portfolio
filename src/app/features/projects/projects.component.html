@@ -7,8 +7,8 @@
       
       <div class="projects-grid">
         @for (project of projects; track project.id) {
-          <a [href]="project.github" target="_blank" rel="noopener" class="project-card" [title]="'Ver ' + project.title + ' en GitHub'">
-            <h3 class="project-title">{{ project.title }}</h3>
+          <a [href]="project.link" target="_blank" rel="noopener" class="project-card" [title]="'Ver ' + project.name + ' en GitHub'">
+            <h3 class="project-title">{{ project.name }}</h3>
             <p class="project-description">{{ project.description }}</p>
             
             <div class="project-tech">

@@ -81,22 +81,30 @@ export const CV_DATA: CVData = {
       name: 'Elecciones ULT',
       description: 'Sistema de votaciones electrónicas para la universidad.',
       technologies: ['Java', 'SQLite', 'Desktop FullStack'],
+      link: 'https://github.com/ElectroZombie/elecciones_ult',
+      id: 1
     },
     {
       name: 'LisTesis',
       description: 'Plataforma para gestión de tesis de grado.',
       technologies: ['Flutter', 'SQLite', 'App'],
+      link: 'https://github.com/ElectroZombie/LisTesis',
+      id: 2
     },
     {
       name: 'Encuestas de Cuadros',
       description: 'Sistema de encuestas para evaluación de directivos.',
       technologies: ['Java', 'SQLite', 'Desktop FullStack'],
+      link: 'https://github.com/ElectroZombie/Encuestas_de_Cuadros',
+      id: 3
     },
     {
       name: 'EsculTunas',
       description:
         'Aplicación educativa para conocer las esculturas de la ciudad de Las Tunas',
       technologies: ['Flutter', 'SQLite', 'App'],
+      link: 'https://github.com/ElectroZombie/escultunas_application',
+      id: 4
     },
   ],
   curriculum: [
